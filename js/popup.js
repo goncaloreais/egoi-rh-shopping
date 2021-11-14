@@ -155,6 +155,7 @@ function getOrders() {
         orders = filterOrders(orders);
         showOrders(orders);
         setStatus('success');
+        setStorage(orders);
     })
     .catch(error => {
         setStatus('error');

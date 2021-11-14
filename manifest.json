@@ -8,8 +8,19 @@
     "action": {
         "default_title": "E-goi RH Shopping",
         "default_icon": "img/small-logo.png",
-        "default_popup": "popup.html"
+        "default_popup": "index.html"
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.bitrix.e-goi.com/*",
+                "https://bitrix.e-goi.com/*"
+            ],
+            "js": [
+                "js/alerts.js"
+            ]
+        }
+    ],
     "icons": {
         "128": "img/logo.png"
     },
