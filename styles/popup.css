@@ -1,38 +1,37 @@
+/* sets the minimun width as 800px, which is the max width for extensions */
 body {
-    min-width: 900px;
+    min-width: 800px;
+    min-height: 300px;
     margin: 0;
 }
 
-.header {
-    display: flex;
+/* navbar styles */
+.navbar-nav {
+    flex-direction: row;
 }
 
-.header img {
-    margin-right: 15px;
+.navbar-nav .nav-item {
+    margin-right: 10px;
 }
 
-.header h1 {
-    justify-self: center;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
+.navbar-nav .nav-item button {
     color: white;
-    text-align: center;
- }
+    border-color: white;
+}
 
+/* loading styles */
+.loading {
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
 
-
-#loading {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     animation: spin 2s linear infinite;
 }
   
@@ -41,13 +40,80 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+.next-dates-list {
+    margin-bottom: 20px
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    min-height: 50px;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+}
+
+.footer-notifications {
+    display: flex;
+    align-self: center;
+}
+
+.footer-description {
+
+}
+
+.error {
+    margin-top: 40px;
+}
+
+.title-group {
+    display: flex;
+}
+
+.title {
+    margin-right: 10px;
+}
+
+.history-table {
+    word-break: break-all;
+}
+
+.history-table .ellipsis {
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.history-table .ellipsis.expand {
+    max-width: 235px;
+}
+
+.header-cols {
+    word-break: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
 #request-success {
     display: none;
 }
 
 #request-error {
     display: none;
-}
+} */
 
 .styled-table {
     border-collapse: collapse;

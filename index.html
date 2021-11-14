@@ -1,52 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=800, initial-scale=1.0">
+    <title>E-goi RH Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/popup.css">
 </head>
+
 <body>
-    <div class="header">
-        <img src="https://www.e-goi.com/wp-content/themes/egoi2019/imgs/svg/logo-egoi.svg" alt="E-goi logo">
-        <h1>RH Shopping</h1>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.e-goi.com/wp-content/themes/egoi2019/imgs/svg/logo-egoi.svg" alt="" width="30"
+                    height="24" class="d-inline-block align-text-top">
+                RH Shopping
+            </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary btn-sm"
+                        id="nextDatesButton">Próximas Compras</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary btn-sm"
+                        id="historyButton">Histórico</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <p class="mt-1 mb-0 mx-3">Esta extensão permite que os colaboradores da E-goi visualizem, de forma ágil, o seu histórico de compras no RH Shopping. Para além disso, a extensão permite ainda saber a data da próxima compra permitida para uma tipologia e ativar notificações.</p>     -->
+
+    <div class="loading">
+        <div class="spinner"></div>
     </div>
 
-    
-    <div id="loading"></div>
-    <div id="request-success">
-        <h1>Testing!</h1>
-        <h1>YES!</h1>
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Points</th>
-                    <th>Points</th>
-                    <th>Points</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dom</td>
-                    <td>6000</td>
-                </tr>
-                <tr class="active-row">
-                    <td>Melissa</td>
-                    <td>5150</td>
-                </tr>
-                <!-- and so on... -->
-            </tbody>
-        </table>
+    <div class="success">
+        <div class="title-group mt-1 mb-2 mx-3">
+            <h4 class="title"></h4>
+            <div class="next-date-labels">
+                <span class="badge rounded-pill bg-success">Menos de uma semana</span>
+                <span class="badge rounded-pill bg-primary">Menos de um mês</span>
+                <span class="badge rounded-pill bg-danger">Mais de um mês</span>
+            </div>
+        </div>
+
+        <div class="content mx-3">
+
+            <div class="next-dates">
+                <ul class="list-group next-dates-list">
+                    
+                </ul>
+            </div>
+
+            <div class="history">
+                <table class="table table-dark table-hover table-sm history-table">
+                    <thead>
+                        <tr class="header-cols">
+                            <th scope="col">Data</th>
+                            <th scope="col">Tipologia</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Loja</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Próxima Compra</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div id="request-error">
-        <h1>Error</h1>
+
+    <div class="error">
+        <div class="mx-3">
+            <div class="alert alert-danger" role="alert">
+                Para que seja possível obter as encomendas RH Shopping, é necessário que a extensão seja aberta na página do Bitrix do E-goi <a href="https://bitrix.e-goi.com">(https://bitrix.e-goi.com)</a> com uma conta loggada.
+            </div>
+        </div>
     </div>
+
     <div class="footer">
-        teste
+        <div class="footer-description">
+
+        </div>
+        <div class="footer-notifications">
+            <div class="form-check form-switch" id="notifications-toggle">
+                <input class="form-check-input" type="checkbox" role="switch" id="notifications">
+                <label class="form-check-label" for="notifications">Notificações</label>
+            </div>
+        </div>
+
     </div>
-    <script src="./js/popup.js"></script>
+
+    <script src="./js/popup.js" type="module"></script>
 </body>
+
 </html>
