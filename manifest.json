@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "E-goi RH Shopping",
+    "description": "Esta extensão permite aos colaboradores da E-goi ver, de forma ágil, as suas compras mais recentes assim como saber quando poderão voltar a fazer compras das diversas tipologias.",
+    "version": "1.0",
+    "author": "E-goi",
+    "homepage_url": "https://www.e-goi.com",
+    "action": {
+        "default_title": "E-goi RH Shopping",
+        "default_icon": "img/small-logo.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "img/logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
